@@ -728,7 +728,7 @@ elif page == "🤖 Podium Predictor":
         fig_sens,
         use_container_width=True,
         config={"responsive": True, "displayModeBar": False}
-        )
+    )
     except Exception:
     st.warning("⚠️ This chart is not supported on your device")
 
