@@ -724,11 +724,11 @@ elif page == "🤖 Podium Predictor":
         margin=dict(l=0,r=0,t=10,b=10), showlegend=False,
     )
     try:
-    st.plotly_chart(
-        fig_sens,
-        use_container_width=True,
-        config={"responsive": True, "displayModeBar": False}
-    )
+        st.plotly_chart(
+            fig_sens,
+            use_container_width=True,
+            config={"responsive": True, "displayModeBar": False}
+        )
     except Exception:
     st.warning("⚠️ This chart is not supported on your device")
 
