@@ -708,7 +708,7 @@ elif page == "🤖 Podium Predictor":
         x=grid_range, y=[p*100 for p in probs_all],
         mode="lines+markers",
         line=dict(color="#e10600", width=2.5),
-        marker=dict(size=6, color="#e10600")
+        marker=dict(size=6, color="#e10600"),
         name="Podium probability",
     ))
     fig_sens.add_hline(y=50, line_color="white", line_dash="dash",
