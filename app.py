@@ -708,11 +708,7 @@ elif page == "🤖 Podium Predictor":
         x=grid_range, y=[p*100 for p in probs_all],
         mode="lines+markers",
         line=dict(color="#e10600", width=2.5),
-        marker=dict(size=7, color=[
-            "#2ecc71" if p>=0.5 else "#e10600" for p in probs_all
-        ], line=dict(color="#fff",width=1)),
-        fill="tozeroy",
-        fillcolor="rgba(225,6,0,0.08)",
+        marker=dict(size=6, color="#e10600")
         name="Podium probability",
     ))
     fig_sens.add_hline(y=50, line_color="white", line_dash="dash",
@@ -727,7 +723,14 @@ elif page == "🤖 Podium Predictor":
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=0,r=0,t=10,b=10), showlegend=False,
     )
-    st.plotly_chart(fig_sens, use_container_width=True)
+    try:
+    st.plotly_chart(
+        fig_sens,
+        use_container_width=True,
+        config={"responsive": True, "displayModeBar": False}
+    )
+except Exception:
+    st.warning("⚠️ This chart is not supported on your device")
 
     # Historical predictions table
     st.markdown('<div class="section-header">Model predictions on historical data</div>', unsafe_allow_html=True)
