@@ -730,7 +730,7 @@ elif page == "🤖 Podium Predictor":
             config={"responsive": True, "displayModeBar": False}
         )
     except Exception:
-    st.warning("⚠️ This chart is not supported on your device")
+        st.warning("⚠️ This chart is not supported on your device")
 
     # Historical predictions table
     st.markdown('<div class="section-header">Model predictions on historical data</div>', unsafe_allow_html=True)
