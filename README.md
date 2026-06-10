@@ -20,7 +20,6 @@
 
 ## 📸 Dashboard Preview
 
-*(Add your screenshot here for visual impact)*
 <img width="959" height="440" alt="image" src="https://github.com/user-attachments/assets/3e93df20-6362-4bf8-b841-369c5f7c0d00" />
 
 
